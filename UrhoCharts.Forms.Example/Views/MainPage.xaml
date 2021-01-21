@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ViewModels="clr-namespace:UrhoCharts.Forms.Example.ViewModels"
+    xmlns:UrhoCharts="clr-namespace:UrhoCharts.Forms;assembly=UrhoCharts.Forms"
+    x:Class="UrhoCharts.Forms.Example.Views.MainPage">
+
+    <ContentPage.BindingContext>
+        <ViewModels:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Frame
+            VerticalOptions="Start"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="#2196F3"
+            Padding="24"
+            CornerRadius="0">
+
+            <Label
+                HorizontalTextAlignment="Center"
+                TextColor="White">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="UrhoCharts.Forms" FontSize="30" FontAttributes="Bold"/>
+                        <Span Text="&#x0A;"/>
+                        <Span Text="Demo" FontSize="30"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Frame>
+
+        <UrhoCharts:ChartView
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            Margin="5"
+            Chart="{Binding SampleChart}">
+        </UrhoCharts:ChartView>
+
+        <Button
+            VerticalOptions="End"
+            HorizontalOptions="FillAndExpand"
+            Margin="5"
+            Text="Reload"
+            Command="{Binding ReloadCommand}">
+        </Button>
+    </StackLayout>
+</ContentPage>
