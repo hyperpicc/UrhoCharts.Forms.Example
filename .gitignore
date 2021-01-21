@@ -1,0 +1,8 @@
+.vs
+UrhoCharts.Forms.Example/bin
+UrhoCharts.Forms.Example/obj
+UrhoCharts.Forms.Example.Android/bin
+UrhoCharts.Forms.Example.Android/obj
+UrhoCharts.Forms.Example.iOS/obj
+UrhoCharts.Forms.Example.iOS/bin
+.DS_Store
